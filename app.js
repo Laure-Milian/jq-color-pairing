@@ -9,5 +9,18 @@ for (i = 0; i < len; i++) {
 	$(inputs[i]).css("backgroundColor", couleurs);
 }
 
+$("input").click(function() {
+	var couleur_bouton = ($(this).data("color"));
+	$("html").css("backgroundColor", couleur_bouton);
+	if(checked()){
+		$(".main").css("color", "blue");
+	}
+});
+
+function checked () { 
+	return $("#modify-texte").is(':checked');
+};
+
+console.log(!checked());
 
 
