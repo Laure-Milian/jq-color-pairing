@@ -1,6 +1,7 @@
 // good luck !
 
 var inputs = $("input");
+console.log(inputs);
 
 var len = inputs.length;
 
@@ -11,10 +12,14 @@ for (i = 0; i < len; i++) {
 
 $("input").click(function() {
 	var couleur_bouton = ($(this).data("color"));
-	$("html").css("backgroundColor", couleur_bouton);
+	
 	if(checked()){
-		$(".main").css("color", "blue");
+		$(".main").css("color", couleur_bouton);
 	}
+	else {
+		$("html").css("backgroundColor", couleur_bouton);
+	}
+
 });
 
 function checked () { 
